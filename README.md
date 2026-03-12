@@ -13,6 +13,9 @@ bài tập lập trình thiết bị di động sử dụng React Native kết h
 ### Forgot Password
 ![Forgot Password](Screenshots/forgotPassword.jpg)
 
+### Lấy mật khẩu thành công
+![Lấy mật khẩu thành công](Screenshots/lay_mk_thanhcong.jpg)
+
 ### Home Screen 1
 ![Home Screen 1](Screenshots/home1.jpg)
 
@@ -22,5 +25,4 @@ bài tập lập trình thiết bị di động sử dụng React Native kết h
 ### Profile Screen
 ![Profile Screen](Screenshots/profile.jpg)
 
-### Lấy mật khẩu thành công
-![Lấy mật khẩu thành công](Screenshots/lay_mk_thanhcong.jpg)
+
