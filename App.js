@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React, { useContext } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppProvider, AppContext } from './src/context/AppContext';
+import AuthStack from './src/navigation/AuthStack';
+import MainStack from './src/navigation/MainStack';
 
-export default function App() {
+function AppNavigator() {
+  const { isLoggedIn } = useContext(AppContext);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      {isLoggedIn ? <MainStack /> : <AuthStack />}
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <AppProvider>
+      <AppNavigator />
+    </AppProvider>
+  );
+}
